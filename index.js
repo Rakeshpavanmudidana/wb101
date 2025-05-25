@@ -1,3 +1,12 @@
+window.onload = function () {
+  const today = new Date();
+  const minDate = new Date(today.getFullYear() - 55, today.getMonth(), today.getDate());
+  const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+
+  document.getElementById('dob').setAttribute('min', minDate.toISOString().split('T')[0]);
+  document.getElementById('dob').setAttribute('max', maxDate.toISOString().split('T')[0]);
+}
+
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
