@@ -42,11 +42,11 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const table = document.querySelector('table');
     const newRow = table.insertRow(-1);
     newRow.innerHTML = `
-      <td class="px-3 py-2">${entry.name}</td>
-      <td class="px-3 py-2">${entry.email}</td>
-      <td class="px-3 py-2">${entry.password}</td>
-      <td class="px-3 py-2">${entry.dob}</td>
-      <td class="px-3 py-2">${entry.acceptedTerms}</td>
+      <td class="px-3 py-2 whitespace-nowrap">${entry.name}</td>
+      <td class="px-3 py-2 whitespace-nowrap">${entry.email}</td>
+      <td class="px-3 py-2 whitespace-nowrap">${entry.password}</td>
+      <td class="px-3 py-2 whitespace-nowrap">${entry.dob}</td>
+      <td class="px-3 py-2 whitespace-nowrap">${entry.acceptedTerms}</td>
     `;
   }
 
