@@ -7,6 +7,10 @@ window.onload = function () {
   document.getElementById('dob').setAttribute('max', maxDate.toISOString().split('T')[0]);
 }
 
+let entries = JSON.parse(localStorage.getItem('entries')) || [];
+
+addrows();
+
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -17,7 +21,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const acceptedTerms = document.getElementById('toggle').checked ? 'true' : 'false';
 
     
-    let entries = JSON.parse(localStorage.getItem('entries')) || [];
+    
     entries.push({
       name,
       email,
@@ -50,9 +54,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
     `;
   }
 
-  addrows();
+  
   function addrows() {
-    const entries = JSON.parse(localStorage.getItem('entries')) || [];
     entries.forEach(entry => {
       addrow(entry);
     });
