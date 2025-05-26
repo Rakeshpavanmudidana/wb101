@@ -14,7 +14,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const dob = document.getElementById('dob').value;
-    const acceptedTerms = document.getElementById('toggle').checked ? 'Yes' : 'No';
+    const acceptedTerms = document.getElementById('toggle').checked ? 'true' : 'false';
 
     
     let entries = JSON.parse(localStorage.getItem('entries')) || [];
